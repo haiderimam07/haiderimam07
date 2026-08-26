@@ -112,7 +112,19 @@ jobs:
               console.log('✅ Weekly stats updated');
             }
 
-            
+            updateRecentActivity() {
+              const activities = [
+                "🔄 Optimized algorithms and data structures in C++",
+                "🤖 Built ML pipeline using TensorFlow and LangChain",
+                "☁️ Deployed microservices on AWS/Azure with Docker",
+                "🚀 Implemented FastAPI backend with PostgreSQL",
+                "🔧 Enhanced React TypeScript components",
+                "� Designed scalable system architecture",
+                "🗄️ Optimized database queries with Prisma ORM",
+                "� Developed distributed systems with Kafka",
+                "🧠 Experimented with Generative AI frameworks",
+                "🔍 Refactored codebase following SOLID principles"
+              ];
               
               const randomActivities = activities
                 .sort(() => 0.5 - Math.random())
@@ -164,6 +176,7 @@ jobs:
               await this.init();
               this.updateDailyStats();
               this.updateWeeklyStats();
+              this.updateRecentActivity();
               await this.updateQuote();
               await this.save();
               console.log('🎉 Profile update completed successfully!');
