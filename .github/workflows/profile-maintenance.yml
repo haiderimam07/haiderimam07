@@ -72,7 +72,7 @@ jobs:
 
           **⏰ Last Updated:** Auto-updated every 10 minutes
 
-          **📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=haiderimam075&color=brightgreen)
+          **📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=haiderimam07&color=brightgreen)
           <!-- DAILY_STATS:END -->`;
               
               this.content = this.content.replace(dailyStatsRegex, newDailyStats);
