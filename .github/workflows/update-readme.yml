@@ -12,22 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-
-      - name: Install dependencies
-        run: |
-          npm install -g typescript
-          npm install axios cheerio @types/node
 
       - name: Update daily stats
         run: |
@@ -90,13 +83,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git pull --rebase origin main
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add README.md
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "📊 Daily README update - $(date +'%Y-%m-%d')"
-            git push origin main
-          fi
+          git diff --quiet && git diff --staged --quiet || (git commit -m "📊 Daily README update" && git push)
