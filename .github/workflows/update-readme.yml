@@ -2,7 +2,6 @@ name: Update README with Daily Stats
 
 on:
   schedule:
-    # Runs once daily at 00:00 UTC (midnight)
     - cron: '0 0 * * *'
   workflow_dispatch:
   push:
@@ -52,16 +51,15 @@ jobs:
             
             const dailyStatsRegex = /<!-- DAILY_STATS:START -->[\s\S]*?<!-- DAILY_STATS:END -->/;
             const newDailyStats = `<!-- DAILY_STATS:START -->
-          **🗓️ Today's Date:** ${currentDate}
+**🗓️ Today's Date:** ${currentDate}
 
-          **⏰ Last Updated:** ${currentTime}
+**⏰ Last Updated:** ${currentTime}
 
-          **📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=Tarun2605&color=brightgreen)
-          <!-- DAILY_STATS:END -->`;
+**📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=haiderimam07&color=brightgreen)
+<!-- DAILY_STATS:END -->`;
             
             content = content.replace(dailyStatsRegex, newDailyStats);
             
-            // Update recent activity
             const activities = [
               "🔄 Updated profile README with latest stats",
               "📊 Refreshed daily metrics",
@@ -73,11 +71,11 @@ jobs:
             const randomActivity = activities[Math.floor(Math.random() * activities.length)];
             const recentActivityRegex = /<!-- RECENT_ACTIVITY:START -->[\s\S]*?<!-- RECENT_ACTIVITY:END -->/;
             const newRecentActivity = `<!-- RECENT_ACTIVITY:START -->
-          **⚡ Recent GitHub Activity:**
-          - ${randomActivity}
-          - 📅 Daily README update: ${currentDate}
-          - 🤖 Automated via GitHub Actions
-          <!-- RECENT_ACTIVITY:END -->`;
+**⚡ Recent GitHub Activity:**
+- ${randomActivity}
+- 📅 Daily README update: ${currentDate}
+- 🤖 Automated via GitHub Actions
+<!-- RECENT_ACTIVITY:END -->`;
             
             content = content.replace(recentActivityRegex, newRecentActivity);
             
@@ -94,18 +92,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-
-          # Stash local changes before pulling remote updates
-          git add README.md
-          git stash --include-untracked
-
-          # Pull and rebase latest main to avoid non-fast-forward errors
-          git fetch origin main
-          git rebase origin/main || git rebase --abort
-
-          # Reapply stashed changes
-          git stash pop || true
-
+          git pull --rebase origin main
           git add README.md
           if git diff --staged --quiet; then
             echo "No changes to commit"
