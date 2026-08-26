@@ -122,7 +122,7 @@ C            1 hr 2 mins     █░░░░░░░░░░░░░░░░
   
 **Thanks for visiting! 😄**
 
-![Snake animation](https://github.com/Tarun2605/Tarun2605/blob/output/github-contribution-grid-snake.svg)
+![Snake animation](https://github.com/haiderimam07/haiderimam07/blob/output/github-contribution-grid-snake.svg)
 
 </div><!--
 **Tarun2605/Tarun2605** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
