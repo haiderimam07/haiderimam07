@@ -66,12 +66,13 @@ jobs:
               const currentDate = now.toLocaleDateString('en-US', dateOptions);
               const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: 'UTC' });
               const currentTime = `${timeString} UTC`;
+              const lastUpdatedString = `${currentDate} at ${timeString} UTC`;
               
               const dailyStatsRegex = /<!-- DAILY_STATS:START -->[\s\S]*?<!-- DAILY_STATS:END -->/;
               const newDailyStats = `<!-- DAILY_STATS:START -->
           **🗓️ Today's Date:** ${currentDate}
 
-          **⏰ Last Updated:** ${currentTime}
+          **⏰ Last Updated:** ${lastUpdatedString}
 
           **📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=haiderimam07&color=brightgreen)
           <!-- DAILY_STATS:END -->`;
