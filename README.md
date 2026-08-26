@@ -22,7 +22,7 @@
 
 **⏰ Last Updated:** 2026-08-26T01:22:30.272Z
 
-**📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=Tarun2605&color=brightgreen)
+**📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=haiderimam07&color=blue&style=flat)
 <!-- DAILY_STATS:END -->
 
 ## 🛠️ Tech Stack
