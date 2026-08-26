@@ -1,7 +1,7 @@
 # Hi there, I'm Haider Imam! 👋
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?lines=Full+Stack+Developer;Machine+Learning+Engineer;Competitive+Programmer;DSA+Enthusiast;Generative+AI+Developer;Open+Source+Contributor&center=true&width=500&height=50">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=Full+Stack+Developer;Machine+Learning+Engineer;DSA+Enthusiast;Generative+AI+Developer;&center=true&width=500&height=50">
 </div>
 
 ## 🚀 About Me
@@ -56,10 +56,7 @@
 
 ### 🗄️ Databases & Related Tools
 ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
-![Prisma](https://img.shields.io/badge/-Prisma%20ORM-2D3748?style=flat-square&logo=prisma&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Neo4j](https://img.shields.io/badge/-Neo4j-008CC1?style=flat-square&logo=neo4j&logoColor=white)
-![Pinecone](https://img.shields.io/badge/-Pinecone-000000?style=flat-square&logo=pinecone&logoColor=white)
 
 ### 🔧 Developer Tools
 ![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
@@ -71,7 +68,7 @@
 ![LeetCode](https://img.shields.io/badge/-LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black)
 ![Codeforces](https://img.shields.io/badge/-Codeforces-1F8ACB?style=flat-square&logo=codeforces&logoColor=white)
 ![CodeChef](https://img.shields.io/badge/-CodeChef-5B4638?style=flat-square&logo=codechef&logoColor=white)
-![AtCoder](https://img.shields.io/badge/-AtCoder-000000?style=flat-square&logo=atcoder&logoColor=white)
+
 
 
 
