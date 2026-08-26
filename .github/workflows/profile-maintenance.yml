@@ -70,7 +70,7 @@ jobs:
               const newDailyStats = `<!-- DAILY_STATS:START -->
           **🗓️ Today's Date:** ${currentDate}
 
-          **⏰ Last Updated:** Auto-updated every 10 minutes
+          **⏰ Last Updated:** ${currentTime}
 
           **📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=haiderimam07&color=brightgreen)
           <!-- DAILY_STATS:END -->`;
