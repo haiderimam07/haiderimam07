@@ -53,7 +53,7 @@ jobs:
               }
             }
 
-            updateDailyStats() {
+           updateDailyStats() {
               const now = new Date();
               const dateOptions = { 
                 weekday: 'long', 
@@ -64,7 +64,8 @@ jobs:
               };
               
               const currentDate = now.toLocaleDateString('en-US', dateOptions);
-              const currentTime = now.toISOString().split('T')[0];
+              const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: 'UTC' });
+              const currentTime = `${timeString} UTC`;
               
               const dailyStatsRegex = /<!-- DAILY_STATS:START -->[\s\S]*?<!-- DAILY_STATS:END -->/;
               const newDailyStats = `<!-- DAILY_STATS:START -->
