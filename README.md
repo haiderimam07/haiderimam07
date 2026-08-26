@@ -71,7 +71,11 @@
 ![Codeforces](https://img.shields.io/badge/-Codeforces-1F8ACB?style=flat-square&logo=codeforces&logoColor=white)
 ![CodeChef](https://img.shields.io/badge/-CodeChef-5B4638?style=flat-square&logo=codechef&logoColor=white)
 
+## 📈 GitHub Streak & Stats
 
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=haiderimam07&theme=tokyonight&hide_border=false" alt="Streak Stats" />
+</p>
 
 
 ## 🎯 Weekly Development Breakdown
@@ -89,13 +93,13 @@ C            1 hr 2 mins     █░░░░░░░░░░░░░░░░
 
 
 
-## 📑 Latest Blog Posts
+## 📝 Latest Blog Posts
 
 <!-- BLOG:START -->
-**📑 No recent blog posts available**
+**📰 No recent blog posts available**
 <!-- BLOG:END -->
 
-## ⚡ Recent Activity
+## 🌟 Recent Activity
 
 <!-- RECENT_ACTIVITY:START -->
 **⚡ Recent GitHub Activity:**
