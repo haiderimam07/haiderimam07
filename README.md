@@ -80,17 +80,7 @@
 </div>
 
 
-## 🎯 Weekly Development Breakdown
 
-<!-- WEEKLY_STATS:START -->
-```text
-C++          9 hrs 30 mins   █████████░░░░░░░░░░░ 45.2%
-Python       6 hrs 45 mins   ██████░░░░░░░░░░░░░░ 32.1%
-TypeScript   2 hrs 15 mins   ██░░░░░░░░░░░░░░░░░░ 10.7%
-JavaScript   1 hr 30 mins    █░░░░░░░░░░░░░░░░░░░ 7.1%
-C            1 hr 2 mins     █░░░░░░░░░░░░░░░░░░░ 4.9%
-```
-<!-- WEEKLY_STATS:END -->
 
 
 
