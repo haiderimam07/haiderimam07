@@ -71,14 +71,16 @@
 
 ## 📈 GitHub Stats
 
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=haiderimam07&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=haiderimam07&layout=compact&langs_count=8&theme=tokyonight"/>
-</div>
+## 📈 GitHub Stats
 
-<div align="center">
-  <img src="https://streak-stats.demolab.com/?user=haiderimam07&theme=tokyonight" alt="GitHub Streak"/>
-</div>
+<p align="center">
+  <img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api?username=haiderimam07&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="Haider's GitHub Stats" />
+  <img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=haiderimam07&layout=compact&langs_count=8&theme=tokyonight" alt="Top Languages" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=haiderimam07&theme=tokyonight" alt="GitHub Streak" />
+</p>
 
 
 ## 🎯 Weekly Development Breakdown
