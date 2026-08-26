@@ -23,13 +23,7 @@
 **📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=haiderimam075&color=brightgreen)
 <!-- DAILY_STATS:END -->
 
-<!-- RECENT_ACTIVITY:START -->
-**⚡ Recent GitHub Activity:**
-- � Developed distributed systems with Kafka
-- � Designed scalable system architecture
-- 🔍 Refactored codebase following SOLID principles
-- 📅 Profile updated: August 26, 2026
-<!-- RECENT_ACTIVITY:END -->
+
 
 ## 🛠️ Tech Stack
 
@@ -112,7 +106,7 @@ C            1 hr 2 mins     █░░░░░░░░░░░░░░░░
 - 🤖 Automated via GitHub Actions
 <!-- RECENT_ACTIVITY:END -->
 
-## 🌐 Connect With Me
+
 
 ## � Connect With Me
 
