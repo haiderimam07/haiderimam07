@@ -8,11 +8,10 @@
 
 - 🔭 I'm currently working on **Full-Stack Development** and **Generative AI** projects with a focus on scalable systems
 - 🧠 **Competitive Programmer** with strong expertise in **Data Structures & Algorithms** using C++
-- 🤖 Specialized in **Machine Learning** and **Generative AI** frameworks including TensorFlow, LangChain, and LangGraph
-- 🌱 I'm constantly learning **Advanced Algorithms**, **System Design**, **Cloud Architecture**, and **LLM Development**
+- 🤖 Learning **Machine Learning** and **Generative AI** frameworks including LangChain and LangGraph
+- 🌱 I'm constantly learning **Advanced Algorithms**, **System Design** and **LLM Development**
 - 🏆 Active in **Competitive Programming** contests and **Algorithm Challenges**
 - 👯 I'm looking to collaborate on **Open Source** projects, **AI/ML Research**, **System Design**, and **Competitive Programming**
-- 💬 Ask me about **DSA**, **Competitive Programming**, **Machine Learning**, **Generative AI** or **Backend Development**
 - 📫 How to reach me: [md.imam.ug22@nsut.ac.in]
 
 <!-- DAILY_STATS:START -->
