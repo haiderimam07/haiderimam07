@@ -15,16 +15,10 @@
 - 💬 Ask me about **DSA**, **Competitive Programming**, **Machine Learning**, **Generative AI** or **Backend Development**
 - 📫 How to reach me: [md.imam.ug22@nsut.ac.in]
 
-## 📊 Daily Stats
-
 <!-- DAILY_STATS:START -->
 **🗓️ Today's Date:** 
 
-<<<<<<< Updated upstream
 **⏰ Last Updated:** 
-=======
-**⏰ Last Updated:** 2026-08-26T16:36:31.223Z
->>>>>>> Stashed changes
 
 **📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=haiderimam07&color=brightgreen)
 <!-- DAILY_STATS:END -->
@@ -95,26 +89,22 @@ C            1 hr 2 mins     █░░░░░░░░░░░░░░░░
 
 
 
-## 📝 Latest Blog Posts
+## 📑 Latest Blog Posts
 
 <!-- BLOG:START -->
-**📰 No recent blog posts available**
+**📑 No recent blog posts available**
 <!-- BLOG:END -->
 
+## ⚡ Recent Activity
 
-<<<<<<< Updated upstream
-=======
 <!-- RECENT_ACTIVITY:START -->
 **⚡ Recent GitHub Activity:**
-<<<<<<< Updated upstream
-- 📊 Refreshed daily metrics
-=======
-- 🔧 Optimized repository automation
->>>>>>> Stashed changes
+- 🔄 Updated profile README with latest stats
 - 📅 Daily README update: Wednesday, August 26, 2026
 - 🤖 Automated via GitHub Actions
 <!-- RECENT_ACTIVITY:END -->
->>>>>>> Stashed changes
+
+## 🌐 Connect With Me
 
 ## � Connect With Me
 
