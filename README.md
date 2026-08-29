@@ -13,7 +13,7 @@
 - 🏆 Active in **Competitive Programming** contests and **Algorithm Challenges**
 - 👯 I'm looking to collaborate on **Open Source** projects, **AI/ML Research**, **System Design**, and **Competitive Programming**
 - 📫 How to reach me: [md.imam.ug22@nsut.ac.in]
-- - 👉 <a href="https://haider-imam.vercel.app/writing" target="_blank" rel="noopener noreferrer"><strong>Read my latest articles</strong></a>
+- 👉 <a href="https://haider-imam.vercel.app/writing" target="_blank" rel="noopener noreferrer"><strong>Read my latest articles</strong></a>
 
 <!-- DAILY_STATS:START -->
 **🗓️ Today's Date:** Saturday, August 29, 2026
