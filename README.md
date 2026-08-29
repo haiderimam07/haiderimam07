@@ -88,7 +88,7 @@
 ## 📝 Latest Blog Posts
 
 <!-- BLOG:START -->
-**📰 No recent blog posts available**
+👉 [**Read my latest articles**](https://haider-imam.vercel.app/writing)
 <!-- BLOG:END -->
 
 ## 🌟 Recent Activity
