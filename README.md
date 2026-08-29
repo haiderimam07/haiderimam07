@@ -12,6 +12,7 @@
 - 🌱 I'm constantly learning **Advanced Algorithms**, **System Design** and **LLM Development**
 - 🏆 Active in **Competitive Programming** contests and **Algorithm Challenges**
 - 👯 I'm looking to collaborate on **Open Source** projects, **AI/ML Research**, **System Design**, and **Competitive Programming**
+- 👉 <a href="https://haider-imam.vercel.app/writing" target="_blank" rel="noopener noreferrer"><strong>Read my latest articles</strong></a>
 - 📫 How to reach me: [md.imam.ug22@nsut.ac.in]
 
 <!-- DAILY_STATS:START -->
@@ -87,9 +88,7 @@
 
 ## 📝 Latest Blog Posts
 
-<!-- BLOG:START -->
-👉 [**Read my latest articles**](https://haider-imam.vercel.app/writing)
-<!-- BLOG:END -->
+
 
 ## 🌟 Recent Activity
 
