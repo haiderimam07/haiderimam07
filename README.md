@@ -36,7 +36,7 @@
 
 **⏰ Last Updated:** Wednesday, October 14, 2026 at 02:43 AM UTC
 
-**📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=haiderimam07&color=brightgreen)
+**📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=haiderimam07&base=205&color=brightgreen)
 <!-- DAILY_STATS:END  -->
 
 
