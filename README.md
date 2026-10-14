@@ -36,7 +36,7 @@
 
 **⏰ Last Updated:** Wednesday, October 14, 2026 at 02:43 AM UTC
 
-**📈Profile Views:** ![Profile Views](https://img.shields.io/badge/Profile_Views-205-brightgreen)
+**📈Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=haiderimam07&color=brightgreen)
 <!-- DAILY_STATS:END  -->
 
 
