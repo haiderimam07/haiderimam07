@@ -7,23 +7,27 @@ on:
   workflow_dispatch:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'README.md'
+
+concurrency:
+  group: update-readme
+  cancel-in-progress: false
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Update daily stats
         run: |
@@ -31,64 +35,72 @@ jobs:
           const fs = require('fs');
           const path = require('path');
 
-          function updateDailyStats() {
-            const readmePath = path.join(__dirname, 'README.md');
-            let content = fs.readFileSync(readmePath, 'utf8');
-            
-            const now = new Date();
-            const dateOptions = { 
-              weekday: 'long', 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
-            };
-            const currentDate = now.toLocaleDateString('en-US', dateOptions);
-            const currentTime = now.toISOString();
-            
-            const dailyStatsRegex = /<!-- DAILY_STATS:START -->[\s\S]*?<!-- DAILY_STATS:END -->/;
-            const newDailyStats = `<!-- DAILY_STATS:START -->
-**🗓️ Today's Date:** ${currentDate}
+          const readmePath = path.join(process.cwd(), 'README.md');
 
-**⏰ Last Updated:** ${currentTime}
-
-**📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=haiderimam07&color=brightgreen)
-<!-- DAILY_STATS:END -->`;
-            
-            content = content.replace(dailyStatsRegex, newDailyStats);
-            
-            // Update recent activity
-            const activities = [
-              "🔄 Updated profile README with latest stats",
-              "📊 Refreshed daily metrics",
-              "⚡ Automated workflow execution",
-              "🚀 Maintained active development streak",
-              "🔧 Optimized repository automation"
-            ];
-            
-            const randomActivity = activities[Math.floor(Math.random() * activities.length)];
-            const recentActivityRegex = /<!-- RECENT_ACTIVITY:START -->[\s\S]*?<!-- RECENT_ACTIVITY:END -->/;
-            const newRecentActivity = `<!-- RECENT_ACTIVITY:START -->
-**⚡ Recent GitHub Activity:**
-- ${randomActivity}
-- 📅 Daily README update: ${currentDate}
-- 🤖 Automated via GitHub Actions
-<!-- RECENT_ACTIVITY:END -->`;
-            
-            content = content.replace(recentActivityRegex, newRecentActivity);
-            
-            fs.writeFileSync(readmePath, content);
-            console.log('README updated successfully!');
+          // Replaces everything between <!-- NAME:START --> and <!-- NAME:END -->
+          // Tolerates extra spaces inside the markers (e.g. "END  -->")
+          function replaceBlock(content, name, lines) {
+            const re = new RegExp('<!--\\s*' + name + ':START\\s*-->[\\s\\S]*?<!--\\s*' + name + ':END\\s*-->');
+            if (!re.test(content)) {
+              console.warn('WARNING: markers for ' + name + ' not found in README.md');
+              return content;
+            }
+            const block = ['<!-- ' + name + ':START -->'].concat(lines, ['<!-- ' + name + ':END -->']).join('\n');
+            return content.replace(re, function () { return block; });
           }
 
-          updateDailyStats();
+          const now = new Date();
+          const currentDate = now.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            timeZone: 'UTC'
+          });
+          const currentTime = now.toISOString();
+
+          let content = fs.readFileSync(readmePath, 'utf8');
+
+          content = replaceBlock(content, 'DAILY_STATS', [
+            "**🗓️ Today's Date:** " + currentDate,
+            '',
+            '**⏰ Last Updated:** ' + currentTime,
+            '',
+            '**📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=haiderimam07&color=brightgreen)'
+          ]);
+
+          const activities = [
+            '🔄 Updated profile README with latest stats',
+            '📊 Refreshed daily metrics',
+            '⚡ Automated workflow execution',
+            '🚀 Maintained active development streak',
+            '🔧 Optimized repository automation'
+          ];
+          const randomActivity = activities[Math.floor(Math.random() * activities.length)];
+
+          content = replaceBlock(content, 'RECENT_ACTIVITY', [
+            '**⚡ Recent GitHub Activity:**',
+            '- ' + randomActivity,
+            '- 📅 Daily README update: ' + currentDate,
+            '- 🤖 Automated via GitHub Actions'
+          ]);
+
+          fs.writeFileSync(readmePath, content);
+          console.log('README updated successfully!');
           EOF
 
           node update-stats.js
 
       - name: Commit and push changes
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
 
           git add README.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "📊 Daily README update - $(date +'%Y-%m-%d')" && git push)
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "📊 Daily README update - $(date -u +'%Y-%m-%d')"
+            git pull --rebase origin main
+            git push
+          fi
