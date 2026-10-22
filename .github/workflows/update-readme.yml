@@ -50,21 +50,26 @@ jobs:
           }
 
           const now = new Date();
-          const currentDate = now.toLocaleDateString('en-US', {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            timeZone: 'UTC'
-          });
-          const currentTime = now.toISOString();
+          const dateOpts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+          const timeOpts = { hour: '2-digit', minute: '2-digit', hour12: true };
+
+          const currentDate = now.toLocaleDateString('en-US', Object.assign({ timeZone: 'Asia/Kolkata' }, dateOpts));
+          const shortDate = { month: 'short', day: 'numeric', year: 'numeric' };
+          const timeOnly = { hour: '2-digit', minute: '2-digit', hour12: true };
+          const istDate = now.toLocaleDateString('en-US', Object.assign({ timeZone: 'Asia/Kolkata' }, shortDate));
+          const utcDate = now.toLocaleDateString('en-US', Object.assign({ timeZone: 'UTC' }, shortDate));
+          const istTime = now.toLocaleTimeString('en-US', Object.assign({ timeZone: 'Asia/Kolkata' }, timeOnly));
+          const utcTime = now.toLocaleTimeString('en-US', Object.assign({ timeZone: 'UTC' }, timeOnly));
+          // Add the UTC date only when it differs from the IST date (around midnight)
+          const utcPart = (utcDate === istDate ? '' : utcDate + ', ') + utcTime + ' UTC';
+          const lastUpdated = istDate + ', ' + istTime + ' IST / ' + utcPart;
 
           let content = fs.readFileSync(readmePath, 'utf8');
 
           content = replaceBlock(content, 'DAILY_STATS', [
             "**🗓️ Today's Date:** " + currentDate,
             '',
-            '**⏰ Last Updated:** ' + currentTime,
+            '**⏰ Last Updated:** ' + lastUpdated,
             '',
             '**📈 Profile Views:** ![Profile Views](https://komarev.com/ghpvc/?username=haiderimam07&color=brightgreen)'
           ]);
