@@ -2,21 +2,23 @@ name: Update README with Daily Stats
 
 on:
   schedule:
-    # Runs daily at 03:17 AM UTC to avoid GitHub's heavy top-of-the-hour cron queue
+    # Runs daily at 03:17 AM UTC to avoid GitHub's heavy cron queue
     - cron: '17 3 * * *'
   workflow_dispatch:
   push:
-    branches: [ main ] 
+    branches: [ main ]
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
+      
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -54,6 +56,7 @@ jobs:
             
             content = content.replace(dailyStatsRegex, newDailyStats);
             
+            // Update recent activity
             const activities = [
               "🔄 Updated profile README with latest stats",
               "📊 Refreshed daily metrics",
@@ -84,7 +87,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
           git add README.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "📊 Daily README update" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "📊 Daily README update - $(date +'%Y-%m-%d')" && git push)
