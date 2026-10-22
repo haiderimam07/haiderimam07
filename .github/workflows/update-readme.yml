@@ -2,7 +2,8 @@ name: Update README with Daily Stats
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    # Runs daily at 03:17 AM UTC to avoid GitHub's heavy top-of-the-hour cron queue
+    - cron: '17 3 * * *'
   workflow_dispatch:
   push:
     branches: [ main ] 
@@ -84,6 +85,6 @@ jobs:
       - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add README.md
           git diff --quiet && git diff --staged --quiet || (git commit -m "📊 Daily README update" && git push)
